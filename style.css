@@ -1,0 +1,55 @@
+/* スクリーン幅に関係なくOffcanvasを常に表示 */
+.offcanvas.show {
+    transform: translateX(0);
+  }
+  /* ドロワーボタンのスタイル */
+.drawer-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ドロワーのスタイル */
+.drawer {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: #333;
+    color: #fff;
+    transition: right 0.3s ease-in-out;
+    overflow-y: auto;
+}
+
+.drawer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.drawer li {
+    padding: 10px;
+}
+
+.drawer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* ドロワーバックドロップのスタイル */
+.drawer-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+/* ドロワーバックドロップ表示時のスタイル */
+.drawer-opened .drawer-backdrop {
+    display: block;
+}
